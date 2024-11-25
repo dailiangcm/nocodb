@@ -1,4 +1,8 @@
-import type { AttachmentResType, PublicAttachmentScope, UserType } from 'nocodb-sdk';
+import type {
+  AttachmentResType,
+  PublicAttachmentScope,
+  UserType,
+} from 'nocodb-sdk';
 import type { NcContext, NcRequest } from '~/interface/config';
 export const JOBS_QUEUE = 'jobs';
 
@@ -115,6 +119,7 @@ export interface DuplicateBaseJobData extends JobData {
     excludeData?: boolean;
     excludeViews?: boolean;
     excludeHooks?: boolean;
+    excludeComments?: boolean;
   };
 }
 
@@ -127,6 +132,7 @@ export interface DuplicateModelJobData extends JobData {
     excludeData?: boolean;
     excludeViews?: boolean;
     excludeHooks?: boolean;
+    excludeComments?: boolean;
   };
 }
 
